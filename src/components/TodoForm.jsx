@@ -10,16 +10,20 @@ const TodoForm = ({ addTodos }) => {
     setValue("");
   };
   return (
-    <div>
+    <div className=" p-3">
       <form action="" onSubmit={HandleSubmit}>
-        <input
+        <div className="flex gap-3 w-full">
+          <input
           type="text"
           name=""
           id=""
+          placeholder="Add Task"
+          className=" w-full px-6 py-3 border-2 rounded-lg outline-0 font-bold  text-3xl"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <button type="submit">Add</button>
+        <button type="submit" className=" w-64 rounded-2xl capitalize font-semibold cursor-pointer bg-amber-50 text-black border-none hover:bg-yellow-400 hover:text-white text-2xl ">Add Task</button>
+        </div>
       </form>
     </div>
   );

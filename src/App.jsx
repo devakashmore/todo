@@ -24,14 +24,18 @@ function App() {
     );
   };
   return (
-    <>
-      <h2>Todo App </h2>
-      <div className="">
+    <div className="bg-gray-700 text-white min-h-screen font-['cooper']">
+      <h2 className="text-5xl font-bold  text-center uppercase pt-5">Todo App </h2>
+      <div className="w-full mx-auto flex justify-center items-center flex-col mt-5 ">
         <TodoForm addTodos={addTodo} />
 
-        <TodoList todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete}/>
+        <TodoList
+          todos={todos}
+          deleteTodo={deleteTodo}
+          toggleComplete={toggleComplete}
+        />
       </div>
-    </>
+    </div>
   );
 }
 
